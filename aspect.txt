@@ -1,0 +1,113 @@
+// Aspect 1 Stored Procedure
+
+BEGIN
+ADD_AMZ_LIST(AMZ_LIST_SEQ.nextval, 11, 3, 3000);
+END;
+/
+
+BEGIN
+ADD_AMZ_LIST(AMZ_LIST_SEQ.nextval, 12, 3, 2000);
+END;
+/
+
+
+// Aspect 1 Query
+
+Select p.product_name, p.product_desc, a.price, a.amzn_qty, c.category_name
+FROM product p
+JOIN amazon_list a ON p.product_id = a.product_id
+JOIN category c ON c.category_id = a.category_id
+WHERE a.price < 30 AND c.category_id = 3;
+
+
+
+// Aspect 2 Stored Procedure
+
+BEGIN
+ADD_Shipment(11, 5, 4);
+END;
+/
+
+BEGIN
+ADD_Shipment(12, 5, 4);
+END;
+/
+
+// Aspect 2 Query
+
+SELECT v.vendor_name, p.product_name, a.quantity
+FROM amazon_warehouse a
+JOIN product p on p.product_id = a.product_id
+JOIN vendor v on v.vendor_id = a.vendor_id
+WHERE quantity < 11 AND a.vendor_id = 5;
+
+
+
+// Aspect 3 Stored Procedure
+
+BEGIN
+ADD_amz_customer(Cust_SEQ.nextval, 'Alicia', 'Fazzone', '78 Bellingham Ave.', 'Revere', 'MA', '02151', 'alf11235@gmail.com');
+END;
+/
+
+BEGIN
+ADD_amz_cust(cust_seq.nextval, 'Shoo', 'Li', '200 Commonwealth Ave.', 'Boston', 'MA', '02150', 'Is1993@bu.edu');
+END;
+/
+
+
+// Aspect 3 Query
+
+SELECT l_name, Count(l_name)
+FROM amz_customer
+GROUP BY l_name
+HAVING Count (l_name) > 3;
+
+
+// Aspect 4 Stored Procedure
+ BEGIN 
+ ADD_Purchase(ORDER_SEQ.nextval, 12, 1, 2, 11);
+ END;
+ 
+ BEGIN 
+ ADD_Purchase(ORDER_SEQ.nextval, 11, 3, 1, 10);
+ END;
+
+
+// Aspect 4 Query
+
+SELECT c.f_name, c.l_name, c.street, c.city, c.state, c.zip FROM amz_customer c
+JOIN purchase p ON p.cust_id = c.cust_id
+WHERE p.inventory_id IN (Select inventory_id
+FROM purchase
+HAVING COUNT(cust_id) > 2
+GROUP BY inventory_id);
+
+
+// Aspect 5 Stored Procedure
+
+ BEGIN 
+ ADD_Delivery(Track_SEQ.nextval, 11, 12, SYSDATE, 11);
+ END;
+ 
+ BEGIN 
+ ADD_Delivery(Track_SEQ.nextval, 12, 11, SYSDATE, 10);
+ END;
+
+
+
+// Aspect 5 Query
+
+Select Count(track_id) as VDAY_total, delivery_date 
+FROM Delivery
+GROUP BY delivery_date
+HAVING delivery_date = '14-FEB-2018';
+
+
+
+
+
+// Index Creation
+
+CREATE INDEX amz_list_price
+ON Amazon_List (price);

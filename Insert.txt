@@ -1,0 +1,133 @@
+// Aspect 1
+
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Kitchen');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Electronics');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Books');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Sports');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Makeup');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Shoes');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Kitchen');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Tools');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Hats');
+INSERT INTO Category VALUES (CAT_SEQ.nextval, 'Art');
+
+
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Contact', 'novel');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'spoon', 'utensil');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'baseball glove', 'Wlson leather');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'mascara', 'volumizing');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'penny loafer', 'Cole Haan');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Relativity', 'painting');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Commodore 64', 'retro computer');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Xone 92', 'DJ mixer');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Pioneer Headphones', 'DJ equipment');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Beanie', 'blue');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Holographic keyboard', '3d projection virtual key press');
+INSERT INTO product VALUES (PROD_SEQ.nextval, 'Self driving video', 'automatically follows subject');
+
+
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 1,4,15,9);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 2,2,421,3);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 3,5,23,60);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 4,6,101,12);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 5,7,41,120);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 6,11,3,79);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 7,3,2,16);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 8,3,14,1599);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 9,3,50,30);
+INSERT INTO amazon_list VALUES (AMZ_LST_SEQ.nextval, 10,10,63,14);
+
+
+
+// Aspect 2
+
+
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Hat World');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'City Sports');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Glow Cosmetics');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Guitar Center');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Electronics R US');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Kitchen Stop');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Cheap Art');
+INSERT INTO Vendor VALUES (vendor_seq.nextval, 'Brattle Books');
+
+
+INSERT INTO ships  VALUES (1,8);
+INSERT INTO ships  VALUES (2,6);
+INSERT INTO ships  VALUES (3,2);
+INSERT INTO ships  VALUES (4,3);
+INSERT INTO ships  VALUES (6,7);
+INSERT INTO ships  VALUES (7,5);
+INSERT INTO ships  VALUES (8,4);
+INSERT INTO ships  VALUES (9,5);
+INSERT INTO ships  VALUES (10,1);
+INSERT INTO ships  VALUES (11,5);
+INSERT INTO ships  VALUES (12,5);
+
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,1,8,1,14);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,2,6,2,100);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,3,2,3,40);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,4,3,4,54);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,6,7,6,3);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,7,5,7,25);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,8,4,8,3);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,9,5,9,17);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,10,1,10,35);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,11,5,11,0);
+INSERT INTO Amazon_Warehouse  VALUES (amz_wh_seq.nextval,12,5,12,0);
+
+
+
+
+// Aspect 3
+
+
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Jane', 'Smith', '14 Broad St.', 'Philadelphia', 'PA', '19016', '12345@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'John', 'Smith', '2405 Mercer St.', 'New Castle', 'PA', '16105', 'jsmith@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Will', 'Smith', '18 Elm St.', 'Philadelphia', 'PA', '19010', 'freshprince@gmail.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Lovie', 'Smith', '10 Main St.', 'Chicago', 'IL', '60007', 'gobears@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Erica', 'Jones', '101 5th Ave.', 'New York', 'NY', '11111', 'jones@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Jenny', 'Baker', '155 Poplar St.', 'Boston', 'MA', '02101', 'baker@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Jake', 'Metro', '15 Collins Ave.', 'Miami', 'FL', '33101', 'miami@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Henry', 'Cortez', '74 Salem St.', 'Boston', 'MA', '02101', 'henry@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Carla', 'Jones', '16 Atlantic Ave.', 'Boston', 'MA', '02101', 'carla@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Scott', 'Brown', '54 Hanover St.', 'Boston', 'MA', '02101', 'brown@yahoo.com');
+INSERT INTO amz_customer VALUES (cust_seq.nextval, 'Alex', 'Warner', '800 Washington St.', 'Boston', 'MA', '02101', 'warner@gmail.com');
+
+
+// Aspect 4
+
+
+
+INSERT INTO Speed VALUES (1, 'Super-Saver');
+INSERT INTO Speed VALUES (2, 'Standard');
+INSERT INTO Speed VALUES (3, 'Two-day');
+INSERT INTO Speed VALUES (4, 'One-day');
+
+
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 1, 1, 2, 9);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 2, 1, 1, 9);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 3, 1, 3, 9);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 4, 1, 4, 9);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 5, 10, 4, 2);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 6, 1, 4, 1);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 7, 1, 4, 10);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 8, 1, 2, 3);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 9, 1, 2, 4);
+INSERT INTO Purchase VALUES (ORDER_SEQ.nextval, 10, 1, 3, 4);
+
+
+// Aspect 5
+
+
+
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 1, 1, Cast('14-FEB-2018' AS DATE), 9);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 2, 2, Cast('14-FEB-2018' AS DATE), 9);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 3, 3, Cast('14-FEB-2018' AS DATE), 9);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 4, 4, Cast('01-APR-2018' AS DATE), 9);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 5, 5, Cast('10-JAN-2018' AS DATE), 2);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 6, 6, Cast('17-DEC-2018' AS DATE), 1);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 7, 7, Cast('16-JUN-2018' AS DATE), 10);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 8, 8, Cast('19-JUL-2018' AS DATE), 3);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 9, 9, Cast('30-OCT-2018' AS DATE), 4);
+INSERT INTO Delivery VALUES (TRACK_SEQ.nextval, 10, 10, Cast('05-FEB-2018' AS DATE), 4);
